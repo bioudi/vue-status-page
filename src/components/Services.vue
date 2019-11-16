@@ -19,28 +19,35 @@
     </div>
 </template>
 <script>
-import config from '../../config.json'
-
 export default {
-    beforeCreate(){
-        Object.keys(config.services).forEach((key) => {
-            config.services[key].fetched = false
-        })
+    props:{
+        services:{
+            type: Object,
+            default: null
+        },
+        retryInterval:{
+            type: Number,
+            default: 30
+        }
     },
     async mounted(){
-        await this.pingServices();
-        setTimeout(() => {
-            this.$root.$emit('isAllGood', !this.somethingWentWrong.includes(true));
-        }, 1000);
+        this.pingServicesAndNotify()
+        setInterval(async () => {
+            this.pingServicesAndNotify()
+        }, this.retryInterval * 1000);
     },
     data(){
         return {
-            services: config.services,
             somethingWentWrong: []
         }
     },
     methods:{
+        async pingServicesAndNotify(){
+            await this.pingServices();
+            this.$root.$emit('isAllGood', !this.somethingWentWrong.includes(true));
+        },
         async pingServices(){
+            this.somethingWentWrong = []
             let requests = []
             Object.keys(this.services).forEach((key) => requests.push(this.fetchHost(this.services[key])))
             await Promise.all(requests)
