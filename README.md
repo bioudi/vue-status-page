@@ -12,7 +12,7 @@ npm install
 
 ## Configuration
 
-You can add your services in this file named [config.js](https://github.com/bioudi/vue-status-page/blob/master/config.js).
+You can add your services in this file named [config.js](https://github.com/bioudi/vue-status-page/blob/master/config.json).
 
 
 for every service you have three parameter to indicate:
