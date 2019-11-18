@@ -54,6 +54,7 @@ export default {
         },
         fetchHost(service){
             const mode = service.isWebsite ? { mode: 'no-cors'} : {}
+            if (service.port && service.port != 80 && service.port != 443) service.endpoint += `:${service.port}`;
             return fetch(service.endpoint, mode)
             .then((resp) => {
                 let error = false;

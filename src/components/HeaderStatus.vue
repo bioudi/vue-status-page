@@ -8,10 +8,10 @@
                 </div>
                 <template v-else>
                   <div v-if="isAllGood" class="page-status status-none status-green">
-                    <span class="status font-large">All Systems Operational</span>
+                    <span class="status font-large">All Systems Operational :)</span>
                   </div>
                   <div v-else class="page-status status-none status-red">
-                    <span class="status font-large">Ouups ...</span>
+                    <span class="status font-large">Ouups something went wrong :(</span>
                   </div> 
                 </template>
             </div>
