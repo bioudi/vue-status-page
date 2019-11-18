@@ -1,0 +1,21 @@
+{
+    "retryInterval": "30",
+    "services": {
+        "Personal website": {
+            "endpoint": "https://aminebioudi.com",
+            "isWebsite": true,
+            "port": 443
+        },
+        "Google": {
+            "endpoint": "https://google.com",
+            "isWebsite": true
+        },
+        "RandomApi": {
+            "endpoint": "https://od-api-demo.oxforddictionaries.com/api/v1/filters",
+            "isWebsite": false
+        }
+    },
+    "jiraCloud": {
+        "enabled": false
+    }
+}
