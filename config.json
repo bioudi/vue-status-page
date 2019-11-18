@@ -1,5 +1,5 @@
 {
-    "retryInterval": "30",
+    "retryInterval": 30,
     "services": {
         "Personal website": {
             "endpoint": "https://aminebioudi.com",
