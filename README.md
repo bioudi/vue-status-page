@@ -23,7 +23,7 @@ for every service you have three parameter to indicate:
 
 ```
 {
-    "retryInterval": "30", // in seconds
+    "retryInterval": 30, // in seconds
     "services": {
         "Personal website": {
             "endpoint": "https://aminebioudi.com",
