@@ -1,6 +1,6 @@
 # vue-status-page
 
-🎯Simple light vue project that checkup services by pinging them  ([Demo page](http://vue-status-page.bioudi-dev.com)).
+🎯Simple light vue project that checkup services by pinging them.
 
 ---
 
